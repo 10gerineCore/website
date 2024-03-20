@@ -1,1 +1,204 @@
-10g
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10GERINE GROUP - Home</title>
+    <meta name="description" content="10GERINE is the home of the IETF HTTP Working Group, dedicated to maintaining and developing the Hypertext Transfer Protocol. Learn about HTTP specifications, participate in ongoing work, and contribute to the development of the web's core protocol.">
+    <meta name="keywords" content="10GERINE, IETF, HTTP Working Group, HTTP protocol, web development">
+    <meta name="author" content="10gerine">
+    <link rel="canonical" href="https://10gerine.com/">
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "10GERINE Group",
+          "url": "https://10gerine.com/",
+          "logo": "https://10gerine.com/logo.png"
+      }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0 20px; /* Added padding */
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+
+        header {
+            background-color: #353535;
+            padding: 5px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav{
+          text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left; /* Center navigation links on small screens */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            padding: 10px 0; /* Reduced padding */
+        }
+
+        .content-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+            justify-content: center; /* Center content horizontally */
+            align-items: flex-start; /* Align items at the start of the cross axis */
+        }
+
+        .content-section {
+            flex: 1; /* Equal width for all sections */
+            margin: 0 5px; /* Reduced space between sections */
+            max-width: 300px; /* Limit maximum width of content */
+        }
+
+        #about {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 10px; /* Reduced padding */
+        }
+
+        #bg {
+            background-color: blue;
+            width: 100px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        #bg1 {
+            background-color: rgb(255, 221, 0);
+            width: 100px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        #nav:hover{
+          color: white;
+        }
+
+        a:hover {
+            color: rgb(74, 74, 255);
+            text-decoration: underline;
+        }
+
+        /* Responsive CSS */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            nav ul {
+                margin-bottom: 20px; /* Add space below navigation on smaller screens */
+            }
+
+            .content-section {
+                max-width: 100%; /* Full width for content sections on smaller screens */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>📄<a id="nav" href="#doc"> DOCUMENTATION</a></li>
+                    <li><a id="nav" href="#work">WORK IN PROGRESS</a></li>
+                    <li><a id="nav" href="#tools">PARTICIPATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content-container">
+                <div>
+                    <img src="logo.png" alt="10GERINE Logo" height="350px" width="350px">
+                </div>
+                <div class="content-section">
+                    <section id="about">
+                        <p>The <a href="#">IETF</a> HTTP Working Group maintains and develops the Hypertext Transfer Protocol - the core protocol of the World Wide Web.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main>
+        <div class="container">
+            <div class="content-container">
+                <div class="content-section">
+                    <section id="section1">
+                        <h2>📄 Specs and Tests</h2>
+                        <ul>
+                            <li>Read <a href="#">HTTP-related specifications</a></li>
+                            <span id="bg">the specs!</span>
+                            <li>See our list of (unofficial) <a href="#">tests for HTTP implementations</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="content-section">
+                    <section id="section2">
+                        <h2>👷‍♀️ Work In Progress</h2>
+                        <ul>
+                            <li><a href="#  ">HTTP Extension Development</a></li>
+                            <li>Possible <a href="#">Future Work</a></li>
+                            <li>The <a href="#">HTTP Directorate</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="content-section">
+                    <section id="section3">
+                        <h2>👋 Participate</h2>
+                        <ul>
+                            <li>Learn <a href="#">how to contribute</a> <span id="bg1">start here</span></li>
+                            <li>See our <a href="#">charter</a></li>
+                            <li>Catch up on our <a href="#">mailing list</a></li>
+                            <li>Browse our <a href="#">meeting materials</a></li>
+                            <li>See our <a href="#">resources for document editors</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
