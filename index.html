@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10GERINE GROUP - Home</title>
+    <title>10GERINE</title>
     <meta name="description" content="10GERINE is the home of the IETF HTTP Working Group, dedicated to maintaining and developing the Hypertext Transfer Protocol. Learn about HTTP specifications, participate in ongoing work, and contribute to the development of the web's core protocol.">
     <meta name="keywords" content="10GERINE, IETF, HTTP Working Group, HTTP protocol, web development">
     <meta name="author" content="10gerine">
@@ -17,6 +17,10 @@
           "logo": "https://10gerine.com/logo.png"
       }
     </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <style>
         body {
             margin: 0;
@@ -27,53 +31,22 @@
             color: #333;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 10px 5px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .container1 {
-            width: 80%;
-            margin: 0 auto;
-            padding: 10px 5px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: -50px;
-        }
-
-        .container2 {
-            width: 80%;
-            margin: 0 auto;
-            padding: 10px 5px;
-            box-sizing: border-box;
-            display: block;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: -120px;
-        }
-
         header {
-            background-color: #353535;
+            background-color: #00397F;
             padding: 1px 0;
             text-align: center;
-            color: #3533CD;
+            color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fixed position to keep it at the top */
-            width: 100%; /* Take full width of the viewport */
-            top: 0; /* Position at the top */
-            z-index: 1000; /* Ensure it's above other content */
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            font-size: 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 20px;
             text-transform: uppercase;
         }
 
@@ -86,7 +59,7 @@
 
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 5px;
         }
 
         nav ul li a {
@@ -94,91 +67,225 @@
             color: #fff;
             font-size: 18px;
             transition: color 0.3s ease;
-            padding: 10px 15px; /* Add padding for better clickability */
-            border-radius: 5px; /* Add rounded corners */
+            padding: 5px 10px; 
+            border-radius: 5px; 
         }
 
         nav ul li a:hover {
-            background-color: #3533CD; /* Change background color on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #004AAD; 
+            color: #fff; 
         }
 
         main {
-            padding: 1px 0 1px; /* Adjust padding to accommodate fixed header */
+            padding-top: 5px;
         }
 
-        .content-container {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1px 1px;
+            box-sizing: border-box;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: space-between;
+            text-align: left;
         }
 
-        .content-section {
-            flex: 1;
-            margin: 0 10px;
-            max-width: 300px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .content-section:hover {
-            transform: translateY(-5px);
+        .container1 {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1px 1px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         section {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
+            width: 100%;
+            max-width: 400px;
         }
 
         h2 {
-            margin-top: 0;
             font-size: 24px;
             color: #555;
-            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 10px;
             color: #777;
             margin-bottom: 0;
         }
 
         a {
-            color: blue;
+            color: #004AAD;
             text-decoration: none;
         }
 
         a:hover {
             color: rgb(74, 74, 255);
             text-decoration: underline;
+        }   
+
+        #about {
+            padding-top: 100px;
         }
 
-        .icon {
-            display: inline-block;
-            font-size: 24px;
-            margin-right: 5px;
-            vertical-align: middle;
+        /* Form styles */
+        .subscribe-form {
+            max-width: 400px;
+            margin: 0 auto;
         }
 
-        /* Responsive CSS */
-        @media screen and (max-width: 768px) {
-            .container {
-                width: 100%;
-                flex-direction: column;
-                align-items: stretch;
-            }
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-            nav ul {
-                margin-bottom: 20px;
-            }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
 
-            .content-section {
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #004AAD;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #00397F;
+        }
+        /* Center alignment */
+        #subscribe {
+            text-align: center;
+            margin-left: 400px;
+        }
+
+        subscribe-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left; /* Reset text alignment for form elements */
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            header {
+                font-size: 16px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+            .container, .container1 {
+                width: 90%;
+            }
+            img {
                 max-width: 100%;
             }
+            section {
+                max-width: none;
+            }
         }
+
+        @media only screen and (max-width: 480px) {
+            header {
+                font-size: 14px;
+            }
+            nav ul li a {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+        header {
+            font-size: 18px;
+        }
+        nav ul li a {
+            font-size: 16px;
+        }
+            .container, .container1 {
+            width: 90%;
+        }
+        img {
+            max-width: 100%;
+        }
+        section {
+            max-width: none;
+        }
+    }
+
+        @media only screen and (max-width: 992px) {
+        header {
+            font-size: 16px;
+        }
+        nav ul li a {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+        @media only screen and (max-width: 768px) {
+        header {
+            font-size: 14px;
+        } 
+        nav ul li a {
+            font-size: 14px;
+            padding: 5px 8px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+        @media only screen and (max-width: 576px) {
+        header {
+            font-size: 12px;
+        }
+        nav ul li a {
+            font-size: 12px;
+            padding: 5px 6px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }   
+
+        @media only screen and (max-width: 360px) {
+        header {
+            font-size: 10px;
+        }
+        nav ul li a {
+            font-size: 10px;
+            padding: 5px 4px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -186,63 +293,28 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#doc" aria-label="Documentation">DOCUMENTATION</a></li>
-                    <li><a href="#work" aria-label="Work in Progress">WORK IN PROGRESS</a></li>
-                    <li><a href="#participate" aria-label="Participate">PARTICIPATE</a></li>
+                    <li><a href="#about" aria-label="About Us">ℹ️ ABOUT</a></li>
+                    <li><a href="#blog" aria-label="Blog">📝 Blog</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container1">
-            <div>
-                <img srcset="logo.png" alt="10GERINE Logo" style="max-width: 100%;" loading="lazy">
-            </div>
-            <div class="content-section">
-                <section id="about">
-                    <h2><span class="icon">ℹ️</span> About Us</h2>
-                    <p>Leading the way in tech innovation. Specializing in web development and digital solutions, we empower businesses to thrive online with tailored strategies and cutting-edge software.</p>
-                </section>
-            </div>
+            <img src="logo.png" alt="10GERINE Logo" style="max-width: 50%;" loading="lazy">
+            <section id="about">
+                <h2>📰 About Us</h2>
+                <p>"Welcome to 10gerine, your go-to newsletter for bite-sized professional development insights! Get ready to boost your skills, advance your career, and achieve your goals with our weekly dose of actionable tips and strategies. Subscribe now and take the first step towards unlocking your full potential!"</p>
+            </section>
+            <section id="subscribe">
+                <h2>🗞Subscribe to Our Newsletter🗞</h2>
+                <form action="sub.php" method="POST">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
         </div>
-        <div class="container2">
-            <div class="content-container">
-                <div class="content-section">
-                    <section id="section1">
-                        <h2><span class="icon">📄</span> Specs and Tests</h2>
-                        <span>Resources to help HTTP implementations, including:</span>
-                        <ul>
-                            <li>Read <a href="#" aria-label="HTTP-related specifications">HTTP-related specifications</a></li>
-                            <li>See our list of (unofficial) <a href="#" aria-label="Tests for HTTP implementations">tests for HTTP implementations</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="content-section">
-                    <section id="section2">
-                        <h2><span class="icon">👷‍♀️</span> Work In Progress</h2>
-                        <span>See what's under development and what's coming, including:</span>
-                            <ul>
-                                <li><a href="#" aria-label="HTTP Extension Development">HTTP Extension Development</a></li>
-                                <li>Possible <a href="#" aria-label="Future Work">Future Work</a></li>
-                                <li>The <a href="#" aria-label="HTTP Directorate">HTTP Directorate</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="content-section">
-                        <section id="section3">
-                            <h2><span class="icon">👋</span> Participate</h2>
-                            <span>Want to get involved? Join us!</span>
-                            <ul>
-                                <li>Learn <a href="#" aria-label="How to contribute">how to contribute</a></li>
-                                <li>See our <a href="#" aria-label="Charter">charter</a></li>
-                                <li>Catch up on our <a href="#" aria-label="Mailing List">mailing list</a></li>
-                                <li>Browse our <a href="#" aria-label="Meeting Materials">meeting materials</a></li>
-                                <li>See our <a href="#" aria-label="Resources for document editors">resources for document editors</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
     </main>
-    </body>
-    </html>
+</body>
+</html>
